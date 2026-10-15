@@ -1,0 +1,43 @@
+{
+  "project_name": "Express - Stadium Food Pre-order",
+  "owner": "Adil Shayakhmetov",
+  "component": "Order Processing and Authentication",
+  "stride_threats": [
+    {
+      "category": "Spoofing",
+      "threat": "Бөтен адамның нөмірімен тапсырыс беру",
+      "mitigation": "SMS немесе Fingerprint валидациясы",
+      "status": "In Backlog (EXP-18)"
+    },
+    {
+      "category": "Tampering",
+      "threat": "Браузерде тамақ бағасын 0 теңгеге өзгерту",
+      "mitigation": "Бағаны тек ДҚ-дан (серверден) есептеу",
+      "status": "Implemented"
+    },
+    {
+      "category": "Repudiation",
+      "threat": "Сатушы «бердім» дейді, клиент «алмадым» дейді",
+      "mitigation": "Өзгертілмейтін Аудит журналын жүргізу",
+      "status": "Implemented (EXP-10)"
+    },
+    {
+      "category": "Information Disclosure",
+      "threat": "Тізбекті ID арқылы басқа адамның чегін көру",
+      "mitigation": "URL-да UUIDv4 идентификаторларын қолдану",
+      "status": "In Backlog (EXP-19)"
+    },
+    {
+      "category": "Denial of Service",
+      "threat": "Бәсекелестер 10 000 жалған тапсырыс жіберуі",
+      "mitigation": "Nginx деңгейінде Rate Limiting (1 IP = 5 req/min)",
+      "status": "In Backlog (EXP-20)"
+    },
+    {
+      "category": "Elevation of Privilege",
+      "threat": "Көрерменнің сатушы тақтасына (Kanban) кіріп кетуі",
+      "mitigation": "Рөлдерді JWT токен арқылы серверде тексеру",
+      "status": "Implemented"
+    }
+  ]
+}
