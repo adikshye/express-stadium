@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Express — Предзаказ еды на стадионе</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body data-page="client">
+  <header class="topbar">
+    <a class="brand" href="/">Express</a>
+    <nav class="nav-links">
+      <a href="/" class="active">Витрина</a>
+      <a href="/seller.html">Доска продавца</a>
+    </nav>
+    <button id="cart-open-btn" class="btn-primary" type="button">Корзина (<span id="cart-count">0</span>)</button>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1>Еда на стадионе без очередей</h1>
+        <p>Оформите предзаказ до перерыва, оплатите через Kaspi QR и заберите по 5-значному коду на стойке Express.</p>
+      </div>
+    </section>
+
+    <section class="grid-layout">
+      <div>
+        <h2>Меню фуд-корта</h2>
+        <div id="menu-grid" class="menu-grid"></div>
+      </div>
+
+      <aside class="cart-panel" id="cart-panel">
+        <h2>Ваш заказ</h2>
+        <div id="cart-items" class="cart-items"></div>
+        <div class="cart-total">
+          <span>Итого</span>
+          <strong id="cart-total">0 ₸</strong>
+        </div>
+        <form id="checkout-form" class="checkout-form">
+          <label>Сектор
+            <input type="text" id="sector-input" placeholder="Например, Сектор A" required />
+          </label>
+          <label>Ряд и место
+            <input type="text" id="seat-input" placeholder="Ряд 12, Место 5" required />
+          </label>
+          <button type="submit" class="btn-primary full">Оплатить через Kaspi QR</button>
+        </form>
+        <div id="order-receipt" class="receipt hidden"></div>
+      </aside>
+    </section>
+  </main>
+
+  <div id="kaspi-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="kaspi-title">
+    <div class="modal-card">
+      <h3 id="kaspi-title">Kaspi QR Оплата (Mock)</h3>
+      <p>Сумма к оплате: <strong id="kaspi-amount">0 ₸</strong></p>
+      <div class="qr-box" aria-hidden="true">KASPI QR</div>
+      <div class="modal-actions">
+        <button id="kaspi-cancel" type="button" class="btn-secondary">Отмена</button>
+        <button id="kaspi-confirm" type="button" class="btn-primary">Подтвердить оплату</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>

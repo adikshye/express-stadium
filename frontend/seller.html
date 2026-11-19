@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Express — Kanban-доска продавца (WIP: 3)</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body data-page="seller">
+  <header class="topbar">
+    <a class="brand" href="/">Express</a>
+    <nav class="nav-links">
+      <a href="/">Витрина</a>
+      <a href="/seller.html" class="active">Доска продавца</a>
+    </nav>
+    <div class="wip-readout">WIP: <strong id="wip-counter">0 / 3</strong></div>
+  </header>
+
+  <main class="container">
+    <div class="seller-head">
+      <div>
+        <h1>Kanban-доска кухни</h1>
+        <p>Правило ADR-001 (ЛЗ-9): в колонке «Готовятся» одновременно не более 3 заказов.</p>
+      </div>
+      <button id="refresh-orders" type="button" class="btn-secondary">Обновить</button>
+    </div>
+
+    <div id="wip-alert" class="alert hidden" role="alert"></div>
+
+    <section class="kanban-grid">
+      <div class="kanban-col">
+        <h2>Новые (<span id="count-new">0</span>)</h2>
+        <div id="col-new" class="kanban-list"></div>
+      </div>
+      <div class="kanban-col">
+        <h2>Готовятся — WIP: 3 (<span id="count-progress">0</span>/3)</h2>
+        <div id="col-in_progress" class="kanban-list"></div>
+      </div>
+      <div class="kanban-col">
+        <h2>Готовы к выдаче (<span id="count-ready">0</span>)</h2>
+        <div id="col-ready" class="kanban-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>

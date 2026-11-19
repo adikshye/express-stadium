@@ -1,0 +1,5 @@
+{
+  "name": "Express Stadium",
+  "description": "Веб-система предзаказа еды на стадионе без очередей: витрина клиента с Kaspi QR, Kanban-доска продавца (WIP: 3), ИИ-классификатор отзывов с защитой ПДн и DevOps/PM дашборды.",
+  "requestFramePermissions": []
+}

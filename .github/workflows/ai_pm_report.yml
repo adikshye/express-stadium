@@ -1,0 +1,23 @@
+name: Weekly AI Status Report
+
+on:
+  schedule:
+    - cron: '0 18 * * 5'
+  workflow_dispatch:
+
+jobs:
+  run-ai-assistant:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run PM AI Assistant
+        run: python scripts/pm_ai_assistant.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,31 @@
+id,text,expected_category,ai_predicted,result
+1,"Бургер оказался холодным, хотя забрал сразу по коду",Food Quality,Food Quality,Pass
+2,"Оплата через Kaspi QR прошла дважды, деньги списались",Payment Issue,Payment Issue,Pass
+3,"После оплаты экран завис и не показал пятизначный код",App Bug,App Bug,Pass
+4,"Продавец на стойке выдачи грубо ответил на вопрос",Staff,Staff,Pass
+5,"Картофель фри хрустящий и горячий, отличный вкус",Food Quality,Food Quality,Pass
+6,"Не пришел чек Kaspi после подтверждения транзакции",Payment Issue,Payment Issue,Pass
+7,"Кнопка оформления заказа не нажимается в Safari на iPhone",App Bug,App Bug,Pass
+8,"Кассир очень вежливый, выдал комбо за 20 секунд",Staff,Staff,Pass
+9,"Хот-дог пережаренный, соуса почти не положили",Food Quality,Food Quality,Pass
+10,"QR код Kaspi выдает ошибку при сканировании камерой",Payment Issue,Payment Issue,Pass
+11,"Корзина очистилась сама после переключения вкладки",App Bug,App Bug,Pass
+12,"Персонал перепутал номера заказов на стойке А",Staff,Staff,Pass
+13,"Крылышки BBQ свежие, но порция показалась маленькой",Food Quality,Food Quality,Pass
+14,"Нужен возврат средств, заказ отменили на кухне",Payment Issue,Payment Issue,Pass
+15,"Сайт долго загружается в перерыве матча при 4G",App Bug,App Bug,Pass
+16,"Сотрудник помог быстро найти мою точку выдачи, спасибо",Staff,Staff,Pass
+17,"Напиток теплый и без льда, хотя просили со льдом",Food Quality,Food Quality,Pass
+18,"Терминал не увидел оплату по Kaspi, пришлось ждать",Payment Issue,Payment Issue,Pass
+19,"При вводе сектора форма сбрасывает выбранное место",App Bug,App Bug,Pass
+20,"На стойке выдачи никого не было целых пять минут",Staff,Staff,Pass
+21,"Сочная котлета и мягкая булочка, лучший бургер на арене",Food Quality,Food Quality,Pass
+22,"Списалась комиссия при оплате, хотя указано без комиссии",Payment Issue,Payment Issue,Pass
+23,"Таймер готовности показывает отрицательное время",App Bug,App Bug,Pass
+24,"Вежливые ребята на выдаче, все прошло без очереди",Staff,Staff,Pass
+25,"В лимонаде слишком много сиропа, приторно сладкий",Food Quality,Food Quality,Pass
+26,"Ссылка на оплату Kaspi закрылась раньше времени",Payment Issue,Payment Issue,Pass
+27,"Статус заказа на странице не обновляется без перезагрузки",App Bug,App Bug,Pass
+28,"Кассир отдал холодный бургер и не извинился",Staff,Food Quality,Fail
+29,"Приложение зависло прямо в момент списания Kaspi",Payment Issue,App Bug,Fail
+30,"Долго ждал выдачу, потому что на экране не загорелся номер",App Bug,Staff,Fail
